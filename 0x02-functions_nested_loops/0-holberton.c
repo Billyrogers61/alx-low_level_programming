@@ -5,15 +5,15 @@
  *
  * Return: 0 at the end of the program.
  */
-int main()
+int main(void)
 {
-	char holberton[9] = "Holberton";
+	char holberton[8] = "_putchar";
 	unsigned long int i;
 
-	for (i = 0; i < 9; i++)
+	for (i = 0; i < 8; i++)
 	{
 		_putchar(holberton[i]);
 	}
 	_putchar('\n');
 	return (0);
-}	
+}
