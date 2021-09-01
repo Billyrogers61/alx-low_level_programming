@@ -2,7 +2,6 @@
 
 /**
  * print_alphabet - print alphabets in lowercase
- * 
  */
 void print_alphabet(void)
 {
@@ -12,6 +11,5 @@ void print_alphabet(void)
 	{
 		_putchar(letter);
 	}
-	_putchar("\n");
+	_putchar('\n');
 }
-	     
