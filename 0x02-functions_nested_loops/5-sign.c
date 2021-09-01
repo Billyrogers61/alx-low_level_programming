@@ -2,7 +2,7 @@
 
 /**
  * print_sign - Checks the sign of the argument and prints sign.
- * n : argument character to be checked out.
+ * @n : argument character to be checked out.
  * Return: 1 if n greater than 0, 0 if n is 0 and -1 if n is less than 0.
  */
 int print_sign(int n)
