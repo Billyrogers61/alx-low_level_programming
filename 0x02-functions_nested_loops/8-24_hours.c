@@ -19,10 +19,8 @@ void jack_bauer(void)
 				min = ('0' + min);
 				hour = ('0' + hour);
 			}
-			_putchar("hour" : "min");
+			_putchar(hour ':' min);
 		}
 		hour++;
 	}
 }
-
-	
