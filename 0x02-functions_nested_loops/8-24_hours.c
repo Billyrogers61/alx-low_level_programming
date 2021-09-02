@@ -12,7 +12,7 @@ void jack_bauer(void)
 	int time3;
 	int time4;
 
-	for (time1 = 0; time1 <=2; time1++)
+	for (time1 = 0; time1 <= 2; time1++)
 	{
 		if (time1 == 2 && time2 == 4)
 		{
