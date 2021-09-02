@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * Jack_bauer - prints every minute of the day in a new line
+ * jack_bauer - prints every minute of the day in a new line
  * hour: represents time in hours.
  * min: represents time in minutes.
  */
 void jack_bauer(void)
 {
 	int hour, min;
+	
 	hour = 0;
 
 	while (hour < 24)
@@ -19,7 +20,7 @@ void jack_bauer(void)
 				min = ('0' + min);
 				hour = ('0' + hour);
 			}
-			_putchar(hour +':'+ min);
+			_putchar(hour + ':' + min);
 		}
 		hour++;
 	}
