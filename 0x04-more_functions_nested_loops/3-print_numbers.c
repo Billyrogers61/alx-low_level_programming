@@ -3,7 +3,6 @@
 /**
  * print_numbers - function to print numbers from 0 to 9 then new line.
  * _putchar - ouputs on screen.
- * @num: numbers to be printed.
  *
  * Return: Nothing
  */
@@ -11,10 +10,10 @@ void print_numbers(void)
 {
 	int num;
 
-	num = 48;
-	while (num <= 57)
+	num = 0;
+	while (num < 10)
 	{
-		_putchar(num);
+		_putchar(num + '0');
 		num++;
 	}
 	_putchar("\n");
