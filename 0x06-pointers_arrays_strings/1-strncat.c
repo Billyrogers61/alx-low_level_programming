@@ -2,26 +2,27 @@
 
 /**
  * _strncat - function to concatenate two strings but with conditions.
- * @dest: pointer variable for destination of string.
- * @src: pointer variable to the source of the string.
+ * @destination: pointer variable for destination of string.
+ * @source: pointer variable to the source of the string.
  * @n: no of bytes
  * Return: Character pointer to the resulting string dest.
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strncat(char *destination, char *source, int n)
 {
-	int count;
+	char *add = destination;
 
-	for (count = 0; src[count] != '\0'; count++)
+	while (*destination != '\0')
 	{
-		if (count < n)
-		{
-			dest += src[count];
-		}
-		else
-		{
-			break;
-		}
+		destination++;
 	}
-	dest[count] = '\0';
-	return (dest);
+
+	while ((*source != '\0') && n--)
+	{
+		*destination = *source;
+		destination++;
+		source++;
+	}
+
+	*destination = '\0';
+	return (add);
 }
