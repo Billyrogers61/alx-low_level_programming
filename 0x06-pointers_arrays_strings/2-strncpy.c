@@ -1,27 +1,20 @@
 #include "main.h"
-
 /**
- * _strncpy - Function to copy a string.
- * @dest: pointer variable to string destination.
- * @src: pointer variable to string src.
- * @n: maximum number of bytes.
- * Return: string.
+ *_strncpy - copies a string.
+ *@destination:destination string.
+ *@source:source string.
+ *@n:size to copy from src.
+ *Return: pointer to dest.
  */
-char *_strncpy(char *dest, char *src, int n)
-{
-	int count;
 
-	for (count = 0; src[count] != '\0'; count++)
-	{
-		if (count < n)
-		{
-			dest[count] = src[count];
-		}
-		else
-		{
-			break;
-		}
-	}
-	dest[count] = '\0';
-	return (0);
+char *_strncpy(char *destination, char *source, int n)
+{
+	int i;
+
+	for (i = 0; i < n && source[i] != '\0'; i++)
+		destination[i] = source[i];
+	for ( ; i < n; i++)
+		destination[i] = '\0';
+
+	return (destination);
 }
