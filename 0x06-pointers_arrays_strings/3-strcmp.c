@@ -8,24 +8,17 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int count, count_1, count_2, s1_count, s2_count;
-
-	s1_count = 0;
-	s2_count = 0;
-
-	for (count_1 = 0; s1[count_1] != '\0'; count_1++)
+	while ((*s1 != '\0' && *s2 != '\0') && *s1 == *s2)
 	{
-		s1_count++;
+		s1++;
+		s2++;
 	}
-	for (count_2 = 0; s2[count_2] != '\0'; count_2++)
+	if (*s1 == *s2)
 	{
-		s2_count++;
+		return (0);
 	}
-	if (s1_count > s2_count)
-		count = 1;
-	else if (s1_count == s2_count)
-		count = 0;
 	else
-		count = -1;
-	return (count);
+	{
+		return (*s1 - *s2);
+	}
 }
