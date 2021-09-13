@@ -21,7 +21,7 @@ char *_strchr(char *s, char c)
 		}
 		else
 		{
-			first = &"";
+			first = &"0";
 		}
 	}
 	return (first);
