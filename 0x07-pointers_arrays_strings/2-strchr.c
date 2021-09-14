@@ -9,23 +9,8 @@
  */
 char *_strchr(char *s, char c)
 {
-	int count;
-	char *first;
-
-	for (count = 0; s[count] != '\0'; count++)
-	{
-		if (s[count] == c)
-		{
-			first = &s[count];
-			break;
-		}
-	}
-	if (s[count] != c)
-	{
-		return (0);
-	}
-	else
-	{
-		return (first);
-	}
+	while (*s != c)
+		if (!*s++)
+			return (0);
+	return (s);
 }
