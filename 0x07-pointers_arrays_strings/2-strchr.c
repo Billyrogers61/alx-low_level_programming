@@ -10,7 +10,7 @@
 char *_strchr(char *s, char c)
 {
 	int count;
-	void *first;
+	char *first;
 
 	for (count = 0; s[count] != '\0'; count++)
 	{
@@ -19,10 +19,13 @@ char *_strchr(char *s, char c)
 			first = &s[count];
 			break;
 		}
-		else
-		{
-			first = &"0";
-		}
 	}
-	return (first);
+	if (s[(count - 1)] != c)
+	{
+		return (0);
+	}
+	else
+	{
+		return (first);
+	}
 }
