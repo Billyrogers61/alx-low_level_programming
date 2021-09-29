@@ -3,7 +3,7 @@
 /**
  * array_iterator - Function to execute a function gievn as a parameter.
  * @array: pointer varaible to an array.
- * @siize: size of the array.
+ * @size: size of the array.
  * @action: pointer to a function.
  *
  * Return: Nothing.
