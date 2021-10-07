@@ -12,16 +12,19 @@
  */
 size_t print_list(const list_t *h)
 {
-	unsigned int num;
+	size_t nodes = 0;
 
-	for (num = 0; h->next != NULL; num++)
+	while (h)
 	{
 		if (h->str == NULL)
 			printf("[0] (nil)\n");
+
 		else
-			printf("[%u] %s\n", h->len, h->str);
+			printf("[%d] %s\n", h->len, h->str);
+
+		nodes++;
 		h = h->next;
 	}
-	printf("[%u] %s\n", h->len, h->str);
-	return (num);
+
+	return (nodes);
 }
