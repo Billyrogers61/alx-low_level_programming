@@ -1,20 +1,21 @@
 #include "lists.h"
 
-typedef unsigned int size_t;
 /**
- * list_len - Counts the length of a linked list
- * @h: pointer to the struct
- * Return: the number of nodes
+ * list_len - Linked list function to count the number of elements in the list.
+ * @h: variable pointer to a defined linked_list structure.
+ *
+ * Description: Count elements in the list and return value.
+ * Return: Number of elements of size_t type.
  */
 size_t list_len(const list_t *h)
 {
-	unsigned int i = 0;
+	size_t num;
 
+	num = 0;
 	while (h != NULL)
 	{
+		num++;
 		h = h->next;
-		i++;
 	}
-
-	return (i);
+	return (num);
 }
