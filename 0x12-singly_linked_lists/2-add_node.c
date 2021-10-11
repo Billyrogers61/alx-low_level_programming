@@ -1,9 +1,23 @@
 #include "lists.h"
-#include <string.h>
+/**
+ * _strlen - Function to find the length of a string.
+ * @str: string.
+ *
+ * Return: length of string (int).
+ */
+int _strlen(const char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
 
 /**
- * add_node - Adds a new node to the beginning of linked list
- * @head: Beginning of the linked list
+ * add_node - Function to add a node to the beginning of linked list.
+ * @head: Beginning of the linked list.
  * @str: The string to be added to the list_t list.
  *
  * Return: If the function fails - NULL.
@@ -11,29 +25,12 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	char *dup;
-	int len;
-	list_t *new;
-
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
-		return (NULL);
-
-	dup = strdup(str);
-	if (dup == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
-
-	for (len = 0; str[len];)
-		len++;
-
-	new->str = dup;
-	new->len = len;
-	new->next = *head;
-
-	*head = new;
-
-	return (new);
+	list_t *temp = (list_t*)malloc(sizeof(list_t));
+	if (temp == NULL)
+		return NULL;
+	temp->next = *head;
+	temp->str = strdup(str);
+	temp->len = _strlen(str);
+	*head = temp;
+	return(*head);
 }
