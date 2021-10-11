@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * Excute_before_main - Function to print before the main function.
+ * execute_before_main - Function to print before the main function.
  *
  * Return: Nothing.
  */
