@@ -7,6 +7,18 @@
 #include <string.h>
 
 /**
+ * struct listp_s - singly linked list
+ * @next: points to the next node
+ *
+ * Description: singly linked list of pointers
+ */
+typedef struct listp_s
+{
+	void *p;
+	struct listp_s *next;
+} listp_t;
+
+/**
  * struct listint_s - singly linked list
  * @n: integer
  * @next: points to the next node
@@ -37,6 +49,8 @@ size_t print_listint_safe(const listint_t *head);
 size_t free_listint_safe(listint_t **h);
 listint_t *find_listint_loop(listint_t *head);
 char _putchar();
+void free_listp(listp_t **head);
+
 
 
 #endif /* _LINKED_LISTS_ */
